@@ -27,7 +27,7 @@ app.get("/export-cv/:hash", async (req, res) => {
     await page.close();
     res.status(200).json({ url: `${process.env.BE_END_POINT}${fileName}` });
   } catch (err) {
-    res.status(500).json({ message: "somthing went wrong!", err });
+    res.status(500).json({ message: "somthing went wrong!", err: err. });
   }
 });
 
